@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GB3D - 3D Printing Business</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+            color: white;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            overflow-y: auto; /* Allows scrolling */
+            position: relative;
+        }
+
+        /* Background Effects */
+        .background-effects {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            top: 0;
+            left: 0;
+            overflow: hidden;
+        }
+
+        .background-effects div {
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            background: rgba(255, 255, 255, 0.15);
+            border-radius: 50%;
+            animation: float 6s infinite alternate ease-in-out;
+            filter: blur(10px);
+        }
+
+        @keyframes float {
+            from { transform: translateY(0px); }
+            to { transform: translateY(40px); }
+        }
+
+        .effect1 { top: 10%; left: 15%; width: 120px; height: 120px; animation-duration: 5s; }
+        .effect2 { top: 50%; left: 80%; width: 100px; height: 100px; animation-duration: 7s; }
+        .effect3 { top: 75%; left: 30%; width: 80px; height: 80px; animation-duration: 6s; }
+
+        /* Logo */
+        .logo {
+            margin-top: 15px;
+            margin-bottom: 10px;
+        }
+
+        .logo img {
+            width: 300px; /* Increased size */
+            max-width: 90%;
+            filter: drop-shadow(2px 2px 10px rgba(255, 255, 255, 0.5));
+        }
+
+        /* Main Container */
+        .container {
+            max-width: 900px;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
+            margin-bottom: 40px;
+        }
+
+        h2, h3 {
+            margin-bottom: 10px;
+        }
+
+        p {
+            font-size: 18px;
+            opacity: 0.9;
+        }
+
+        /* Product Section */
+        .product {
+            margin: 20px 0;
+            padding: 20px;
+            border-radius: 10px;
+            background: rgba(0, 0, 0, 0.3);
+        }
+
+        /* Collage */
+        .collage {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 10px;
+        }
+
+        .collage img {
+            width: 30%;
+            max-width: 150px;
+            border-radius: 10px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            filter: brightness(90%);
+        }
+
+        .collage img:hover {
+            transform: scale(1.1);
+            box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.7);
+            filter: brightness(110%);
+        }
+
+        /* Price */
+        .price {
+            font-size: 22px;
+            font-weight: bold;
+            margin-top: 10px;
+            color: #4db8ff;
+        }
+
+        /* Custom Inquiries */
+        .custom-inquiries {
+            margin-top: 30px;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .custom-inquiries textarea {
+            width: 90%;
+            max-width: 600px;
+            height: 100px;
+            padding: 10px;
+            border-radius: 5px;
+            border: none;
+            font-size: 16px;
+        }
+
+        .custom-inquiries button {
+            margin-top: 10px;
+            padding: 10px 20px;
+            border: none;
+            background: #4db8ff;
+            color: white;
+            font-size: 18px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        .custom-inquiries button:hover {
+            background: #3686c2;
+        }
+
+        /* Contact Section */
+        .contact {
+            margin-top: 30px;
+            font-size: 18px;
+            padding-bottom: 20px;
+        }
+
+        a {
+            color: #4db8ff;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            color: #ffffff;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Background Effects -->
+    <div class="background-effects">
+        <div class="effect1"></div>
+        <div class="effect2"></div>
+        <div class="effect3"></div>
+    </div>
+
+    <!-- Logo -->
+    <div class="logo">
+        <img src="logo.png" alt="GB3D Logo">
+    </div>
+
+    <div class="container">
+        <h2>Welcome to GB3D - High-Quality 3D Printed Products</h2>
+        <p>Innovative designs made with precision and creativity.</p>
+
+        <!-- Product 1: Vertebrae Business Card Holder -->
+        <div class="product">
+            <h3>Vertebrae Business Card Holder</h3>
+            <div class="collage">
+                <img src="image1.jpg" alt="Vertebrae Business Card Holder 1">
+                <img src="image2.jpg" alt="Vertebrae Business Card Holder 2">
+                <img src="image3.jpg" alt="Vertebrae Business Card Holder 3">
+            </div>
+            <p>A unique, flexible business card holder designed to impress.</p>
+            <div class="price">$15.00 (or $20 with a custom name, e.g., clinic name)</div>
+        </div>
+
+        <!-- Product 2: Pyramid Passthrough Fidget -->
+        <div class="product">
+            <h3>Pyramid Passthrough Fidget</h3>
+            <div class="collage">
+                <img src="pyramid1.jpg" alt="Pyramid Fidget 1">
+                <img src="pyramid2.jpg" alt="Pyramid Fidget 2">
+                <img src="pyramid3.jpg" alt="Pyramid Fidget 3">
+            </div>
+            <p>A mesmerizing pyramid fidget toy with a unique passthrough design.</p>
+            <div class="price">$6 for 1, $10 for 2 (+$1 for multi-color)</div>
+        </div>
+
+        <!-- Custom Inquiries -->
+        <div class="custom-inquiries">
+            <h3>Custom Inquiries</h3>
+            <p>Have a custom request? Let us know!</p>
+            <textarea id="customMessage" placeholder="Describe your custom request here..."></textarea>
+            <button onclick="sendEmail()">Submit Inquiry</button>
+        </div>
+
+        <div class="contact">
+            <h3>Contact Us</h3>
+            <p>Email: <a href="mailto:gavinrbone@gmail.com">gavinrbone@gmail.com</a></p>
+        </div>
+    </div>
+
+    <script>
+        function sendEmail() {
+            let message = document.getElementById("customMessage").value;
+            window.location.href = `mailto:gavinrbone@gmail.com?subject=Custom Inquiry&body=${encodeURIComponent(message)}`;
+        }
+    </script>
+
+</body>
+</html>
